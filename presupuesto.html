@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>BrillaPro Limpiezas · Presupuesto</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" referrerpolicy="no-referrer">
+
+  <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+  <header>
+    <div class="logo-and-header">
+      <img id="header-logo" src="../images/logo.png" alt="Logotipo de BrillaPro Limpiezas">
+      <h1>BrillaPro Limpiezas</h1>
+    </div>
+    <nav class="main-nav" id="main-nav" aria-label="Barra de navegación">
+      <ul class="nav-list">
+        <li class="nav-item"><a href="../index.html" class="nav-link-a">Inicio</a></li>
+        <li class="nav-item"><a href="./galeria.html" class="nav-link-a">Galería</a></li>
+        <li class="nav-item"><a href="#" class="nav-link-a" aria-current="page">Presupuesto</a></li>
+        <li class="nav-item"><a href="./contacto.html" class="nav-link-a">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+     <section id="form-container">
+      <h2>Formulario de presupuesto</h2>
+     <form id="form-presupuesto" action="" method="post" novalidate>
+      <fieldset>
+        <legend>Datos de contacto</legend>
+        <p>
+          <label for="nombre">Nombre:*</label>
+          <input type="text" name="nombre" id="nombre" placeholder="tu nombre" maxlength="15" required>
+        </p>
+        <p>
+          <label for="apellidos">Apellidos:*</label>
+          <input type="text" name="apellidos" id="apellidos" placeholder="tus apellidos" maxlength="40" required>
+        </p>
+        <p>
+          <label for="tel">Teléfono de contacto:*</label>
+          <input type="tel" name="tel" id="tel" maxlength="9" required>
+        </p>
+        <p>
+          <label for="email">Correo electrónico:*</label>
+          <input type="email" name="email" id="email" required placeholder="correo@ejemplo.com">
+        </p>
+      </fieldset>
+      <fieldset>
+        <legend>Datos para el presupuesto</legend>
+        <h3>Producto:</h3>
+        <p>
+          <label for="limp-banyo">Limpieza del baño - 30€</label>
+          <input type="radio" name="producto" id="limp-banyo" value="30" class="calcular-precio">
+        </p>
+        <p>
+          <label for="limp-cocina">Limpieza de la cocina - 30€</label>
+          <input type="radio" name="producto" id="limp-cocina" value="30" class="calcular-precio">
+        </p>
+        <p>
+          <label for="limp-dorm">Limpieza de un dormitorio - 20€</label>
+          <input type="radio" name="producto" id="limp-dorm" value="20" class="calcular-precio">
+        </p>
+        <p>
+          <label for="plazo">Plazo (semanas):*</label>
+          <input type="number" name="plazo" id="plazo" min="1" required>
+        </p>
+        <h3>Extras:</h3>
+        <p>
+          <label for="materiales">Llevamos materiales de limpieza (+5€)</label>
+          <input type="checkbox" name="materiales" id="materiales" value="5" class="calcular-precio">
+        </p>
+        <p>
+          <label for="platos">Fregamos platos (+10€)</label>
+          <input type="checkbox" name="platos" id="platos" value="10" class="calcular-precio">
+        </p>
+        <p>
+          <label for="planchar">Planchamos ropa (+10€)</label>
+          <input type="checkbox" name="planchar" id="planchar" value="10" class="calcular-precio">
+        </p>
+      </fieldset>
+      <div id="resultado">
+      <p>Precio base: <strong id="precio-base">0</strong> €</p>
+      <p>Descuento: <strong id="descuento">0%</strong></p>
+      <p>Precio final: <strong id="precio-final">0</strong> €</p>
+    </div>
+      <p>
+        <label for="aceptar">Acepto la <a href="./politica-privacidad.html">política de privacidad</a>.*</label>
+        <input type="checkbox" name="aceptar" id="aceptar" required>
+      </p>
+      <button class="btn-accent" type="submit">Enviar formulario</button>
+     </form>
+    </section>
+  </main>
+
+  <footer>
+    <div id="social-buttons">
+      <a href="https://facebook.com" target="_blank" rel="noopener"><i class="fa-brands fa-facebook"></i></a>
+      <a href="https://twitter.com" target="_blank" rel="noopener"><i class="fa-brands fa-twitter"></i></a>
+      <a href="https://whatsapp.com" target="_blank" rel="noopener"><i class="fa-brands fa-whatsapp"></i></a>
+      <a href="https://instagram.com" target="_blank" rel="noopener"><i class="fa-brands fa-instagram"></i></a>
+    </div>
+    <div id="aviso-legal">
+      <p><strong>Aviso legal.</strong> © 2025 BrillaPro Limpiezas. Sitio web informativo, sin carácter contractual.
+        Consulta la <a href="./politica-privacidad.html">Política de Privacidad</a> y
+        <a href="./cookies.html">Política de Cookies</a>.
+      </p>
+    </div>
+    <div id="address">
+      <p>Calle de Alcalá 123, 28009 Madrid, España · <a href="tel:+34910000000">910 000 000</a></p>
+    </div>
+  </footer>
+  <script src="../js/presupuesto.js"></script>
+</body>
+</html>
